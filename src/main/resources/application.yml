@@ -1,7 +1,7 @@
 spring:
     datasource:
         generate-unique-name: false
-        name: blog
+        name: devdb
     h2:
         console:
             enabled: true

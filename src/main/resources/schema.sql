@@ -25,3 +25,15 @@ CREATE TABLE comment (
     updated_on TIMESTAMP,
     FOREIGN KEY (post) REFERENCES post(id)
 );
+
+CREATE TABLE account (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    email VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE role (
+    account INT NOT NULL,
+    name VARCHAR(30) NOT NULL,
+    FOREIGN KEY (account) REFERENCES account(id)
+);
