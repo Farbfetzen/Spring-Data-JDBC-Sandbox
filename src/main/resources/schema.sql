@@ -1,27 +1,27 @@
-create table Author (
-    id int auto_increment primary key,
-    first_name varchar(100) not null,
-    last_name varchar(100) not null,
-    email varchar(255) not null,
-    username varchar(100) not null
+CREATE TABLE author (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    username VARCHAR(100) NOT NULL
 );
 
-create table Post (
-    id int auto_increment primary key,
-    version int,
-    title varchar(255) not null,
-    content text not null,
-    published_on timestamp not null,
-    updated_on timestamp,
-    author int,
-    foreign key (author) references Author(id)
+CREATE TABLE post (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    version INT,
+    title VARCHAR(255) NOT NULL,
+    content text NOT NULL,
+    published_on TIMESTAMP NOT NULL,
+    updated_on TIMESTAMP,
+    author INT,
+    FOREIGN KEY (author) REFERENCES author(id)
 );
 
-create table Comment (
-    post int not null,
-    name varchar(100) not null,
-    content text not null,
-    published_on timestamp not null,
-    updated_on timestamp,
-    foreign key (post) references Post(id)
+CREATE TABLE comment (
+    post INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    content text NOT NULL,
+    published_on TIMESTAMP NOT NULL,
+    updated_on TIMESTAMP,
+    FOREIGN KEY (post) REFERENCES post(id)
 );
