@@ -1,4 +1,4 @@
-package farbfetzen.springdatajdbcsandbox.model.dto;
+package farbfetzen.springdatajdbcsandbox.dto;
 
 import farbfetzen.springdatajdbcsandbox.model.Author;
 import farbfetzen.springdatajdbcsandbox.model.Post;

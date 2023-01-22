@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import farbfetzen.springdatajdbcsandbox.dto.PostDetails;
 import farbfetzen.springdatajdbcsandbox.model.Author;
 import farbfetzen.springdatajdbcsandbox.model.Post;
-import farbfetzen.springdatajdbcsandbox.model.dto.PostDetails;
 import farbfetzen.springdatajdbcsandbox.repository.AuthorRepository;
 import farbfetzen.springdatajdbcsandbox.repository.PostRepository;
 
