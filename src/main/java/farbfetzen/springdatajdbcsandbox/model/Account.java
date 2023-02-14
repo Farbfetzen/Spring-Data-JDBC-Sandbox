@@ -14,16 +14,10 @@ public class Account {
     @Id
     @JsonIgnore
     private Integer id;
-    private String name;
-    private String email;
+    private final String name;
+    private final String email;
     @JsonIgnore
-    private Set<Role> roles;
-
-    public Account(final String name, final String email, final Set<Role> roles ) {
-        this.name = name;
-        this.email = email;
-        this.roles = roles;
-    }
+    private final Set<Role> roles;
 
     @JsonProperty("roles")
     public List<String> getRolesAsStrings() {
